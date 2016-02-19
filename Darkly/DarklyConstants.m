@@ -4,7 +4,7 @@
 
 #import "DarklyConstants.h"
 
-NSString * const kClientVersion = @"0.4.1-beta";
+NSString * const kClientVersion = @"0.4.2-beta";
 NSString * const kBaseUrl = @"https://app.launchdarkly.com";
 NSString * const kNoApiKeyExceptionName = @"NoApiKeyDefinedException";
 NSString * const kNoApiKeyExceptionReason = @"A valid ApiKey must be provided";
@@ -19,5 +19,7 @@ NSString * const kIpad = @"iPad";
 int const kCapacity = 100;
 int const kConnectionTimeout = 10;
 int const kDefaultFlushInterval = 30;
-int const kDefaultConfigCheckInterval = 60;
-float const kMinimumPollingInterval = 0.0;
+int const kDefaultDebugConfigCheckIntervalMillis = 100;
+int const kDefaultProdConfigCheckIntervalMillis = 60000;
+int const kMinimumPollingIntervalMillis = 0;
+int const kMillisInSecs = 1000;
